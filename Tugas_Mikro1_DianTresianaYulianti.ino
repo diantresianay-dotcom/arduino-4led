@@ -25,7 +25,7 @@ void setup() {
   pinMode(led4, OUTPUT);
 
   Serial.begin(9600);
-  Serial.println("Program: 4 LED, 2 tombol toggle, dan 1 potensiometer (versi stabil)");
+  Serial.println("Program: 4 LED, 2 tombol toggle, dan 1 potensiometer");
 }
 
 void loop() {
@@ -86,3 +86,4 @@ void loop() {
 
   delay(50);
 }
+
