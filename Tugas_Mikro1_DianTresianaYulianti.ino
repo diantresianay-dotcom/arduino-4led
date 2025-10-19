@@ -32,7 +32,7 @@ void loop() {
   int stateButton1 = digitalRead(button1);
   int stateButton2 = digitalRead(button2);
   int potValue = analogRead(potPin);
-  int brightness = potValue / 4; // ubah 0–1023 jadi 0–255
+  int brightness = potValue / 4; 
 
   // ===== Button 1: toggle LED1 dan LED2 =====
   if (stateButton1 == LOW && lastButton1State == HIGH) {
@@ -42,7 +42,7 @@ void loop() {
     Serial.print(led1State ? "ON" : "OFF");
     Serial.print(" | LED2: ");
     Serial.println(led2State ? "ON" : "OFF");
-    delay(200); // debounce
+    delay(50); // debounce
   }
   lastButton1State = stateButton1;
 
@@ -53,12 +53,12 @@ void loop() {
   if (stateButton2 == LOW && lastButton2State == HIGH) {
     led3Blink = !led3Blink;
     if (led3Blink) {
-      Serial.println("LED3: MODE KEDAP-KEDIP AKTIF ✅");
+      Serial.println("LED3: MODE KEDAP-KEDIP AKTIF");
     } else {
-      Serial.println("LED3: MATI ❌");
+      Serial.println("LED3: MATI");
       digitalWrite(led3, LOW);
     }
-    delay(200); // debounce
+    delay(50); // debounce
   }
   lastButton2State = stateButton2;
 
@@ -84,6 +84,5 @@ void loop() {
     Serial.println("LED4: Normal");
   }
 
-  delay(50);
+  delay(500);
 }
-
