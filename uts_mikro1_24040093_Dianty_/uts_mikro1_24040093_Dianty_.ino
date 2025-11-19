@@ -158,9 +158,9 @@ void loop() {
         digitalWrite(ledClosed, 0);
 
         lcd.setCursor(0,1);
-        lcd.print("Valve: OPEN   ");
+        lcd.print("Katup: BUKA   ");
 
-        Serial.println("[AUTO] VALVE OPEN");
+        Serial.println("[AUTO] KATUP BUKA");
       }
       else {
         ventServo.write(0);
@@ -168,9 +168,9 @@ void loop() {
         digitalWrite(ledClosed, 1);
 
         lcd.setCursor(0,1);
-        lcd.print("Valve: CLOSED ");
+        lcd.print("Katup: TUTUP ");
 
-        Serial.println("[AUTO] VALVE CLOSED");
+        Serial.println("[AUTO] KATUP TUTUP");
       }
     }
   }
